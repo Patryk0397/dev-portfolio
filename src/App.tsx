@@ -8,7 +8,7 @@ import Contact from './components/Contact';
 import { ThemeProvider } from './ThemeContext';
 import TravelMap from './components/Travel';
 import Footer from './components/Footer';
-import SkillTimeline from './components/SkillTimeline';
+// import SkillTimeline from './components/SkillTimeline';
 
 const App = () => {
   return (
@@ -17,7 +17,7 @@ const App = () => {
         <TopMenu />
         <Hero />
         <About />
-        <SkillTimeline />
+        {/* <SkillTimeline /> */}
         <Experience />
         <Projects />
         <TravelMap />
