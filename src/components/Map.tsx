@@ -89,6 +89,7 @@ const Map: React.FC<MapProps> = ({ isDarkMode }) => {
           if (timeoutId) clearTimeout(timeoutId);
 
           // Hide message after 3 seconds of inactivity
+          // eslint-disable-next-line react-hooks/exhaustive-deps
           timeoutId = setTimeout(() => setShowMessage(false), 3000);
         }
       };
