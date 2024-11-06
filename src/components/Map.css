@@ -1,0 +1,58 @@
+.marker {
+  background-color: #ff5722;
+  cursor: pointer;
+  position: relative;
+}
+
+.pulse::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 87, 34, 0.5);
+  animation: pulsate 2s infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.popup-content {
+  font-family: Arial, sans-serif;
+  max-width: 250px;
+  color: #333;
+  text-align: center;
+}
+
+.popup-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.popup-coordinates {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.popup-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}

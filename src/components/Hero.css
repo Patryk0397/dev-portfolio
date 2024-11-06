@@ -1,0 +1,48 @@
+/* Hero.css */
+.typing-animation .cursor {
+  display: inline-block;
+  width: 1px;
+  background-color: currentColor;
+  animation: blink 0.7s steps(2) infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Arrow container */
+.arrow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(-20deg); /* Adjust to angle the arrow */
+}
+
+.arrow-text {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 4px;
+  transform: rotate(20deg); /* Counter-rotate the text to be straight */
+  font-weight: bold;
+}
+
+/* Arrow styling */
+.arrow {
+  width: 2px;
+  height: 60px;
+  background-color: white;
+  position: relative;
+}
+
+.arrow::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
+}

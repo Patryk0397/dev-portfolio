@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import TopMenu from './components/TopMenu';
+import Hero from './components/Hero';
+import About from './components/About';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import { ThemeProvider } from './ThemeContext';
+import TravelMap from './components/Travel';
+import Footer from './components/Footer';
+import SkillTimeline from './components/SkillTimeline';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <div className="font-sans overflow-x-hidden">
+        <TopMenu />
+        <Hero />
+        <About />
+        <SkillTimeline />
+        <Experience />
+        <Projects />
+        <TravelMap />
+        <Contact />
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
